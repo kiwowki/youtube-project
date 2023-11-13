@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# 나만의 음악(락) 유튜브 사이트 만들기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+유튜브 API를 이용해서 음악을 듣는 사이트를 만들었습니다.
 
-## Available Scripts
+음악 장르 중 락을 가장 좋아해서 유명한 락밴드들을 모아봤습니다.
+유명 락밴드의 음악이 듣고싶다면 여기서 원하는 밴드를 선택해 그들의 음악을 들어보세요!
+신나는 음악부터 음울한 음악까지 모두 경험해보실 수 있습니다.
 
-In the project directory, you can run:
+## 셋팅
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 필요한 패키지 설치 한 번에 하기
+`npm install react-router-dom axios react-icon react-player sass react-helmet-async swiper`   
+- react-router-dom: React 애플리케이션에서 라우팅을 구현하기 위한 라이브러리입니다.   
+- axios: HTTP 요청을 처리하는 라이브러리로, API 호출 등에 사용됩니다.   
+- react-icons: 다양한 아이콘을 제공하는 React 컴포넌트를 포함한 라이브러리입니다.   
+- react-player: 동영상 및 음악 플레이어를 React 애플리케이션에 통합할 수 있는 라이브러리입니다.   
+- sass: CSS 전처리기 중 하나인 Sass를 사용하기 위한 패키지입니다.   
+- react-helmet-async: 동적으로 변경되는 헤더를 관리하기 위한 React Helmet의 비동기 버전입니다.   
+- swiper: 이미지 슬라이더 및 갤러리를 만들기 위한 라이브러리입니다.   
