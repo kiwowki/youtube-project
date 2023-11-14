@@ -19,3 +19,17 @@
 - sass: CSS 전처리기 중 하나인 Sass를 사용하기 위한 패키지입니다.
 - react-helmet-async: 동적으로 변경되는 헤더를 관리하기 위한 React Helmet의 비동기 버전입니다.
 - swiper: 이미지 슬라이더 및 갤러리를 만들기 위한 라이브러리입니다.
+
+### Swiper 사용하기
+
+[swiper 사이트 바로가기](https://swiperjs.com/)
+
+- Resources의 Swiper Demos에서 원하는 슬라이드 디자인을 찾아 CodeSandbox:React의 코드를 원하는 코드에 적용.
+
+##### Swiper, SwiperSlide, Navigation, Autoplay, Responsive breakpoints 적용
+
+- navigation: 좌 우 화살표
+- Autoplay: 자동 이동
+- breakpoints: Swiper의 반응형 데모
+
+- swiper.scss를 만들어서 추가로 scss작업
