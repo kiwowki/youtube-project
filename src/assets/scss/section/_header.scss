@@ -1,0 +1,178 @@
+.header_logo {
+    border-bottom: 1px solid var(--yellow);
+    font-family: var(--oswald);
+    
+
+    a {
+        display: flex;
+        padding: 10px;
+        margin: 5.5px;
+
+        em {
+            width: 50px;
+            height: 50px;
+            background-color: var(--black);
+            margin-right: 15px;
+            border: 2px solid var(--yellow);
+            position: relative;
+            animation: logo 25s 1s ease-in-out infinite;
+            
+
+            @keyframes logo {
+                0% {
+                    transform: rotate(0deg);
+                    border-radius: 0;
+                }
+
+                50% {
+                    transform: rotate(720deg);
+                    border-radius: 50%;
+                    background-color: var(--red);
+                    border-color: var(--white);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                    border-radius: 0;
+                }
+            }
+
+            svg {
+                position: absolute;
+                left: 7px;
+                top: 6px;
+                color: var(--yellow);
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        span {
+            font-size: 23px;
+            line-height: 1.2;
+            font-weight: 900;
+            em {
+                font-style: normal;
+                border: none;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.header_menu {
+    padding: 10px;
+    font-family: var(--hahm);
+
+    .menu {
+        li {
+            margin-bottom: 5px;
+
+            a {
+                font-size: 1rem;
+                display: block;
+                line-height: 1;
+                padding: 1rem 2rem 1rem 2.65rem;
+                border-radius: 40px;
+                position: relative;
+
+                &:hover {
+                    background-color: var(--white);
+                    /* transition 속성을 수정해야 합니다 */
+                    transition: background-color 0.3s ease;
+                    /* 예시: 0.3초 동안 변화, ease 타이밍 함수 사용 */
+                    color: var(--black);
+                }
+            }
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                position: absolute;
+                left: 1rem;
+                top: 0.8rem;
+            }
+
+            &.active {
+                font-size: 1rem;
+                display: block;
+                line-height: 1;
+                border-radius: 40px;
+                position: relative;
+                background-color: var(--yellow);
+                color: var(--black);
+            }
+        }
+
+        border-bottom: 1px solid var(--yellow);
+    }
+
+    .keyword {
+        width: 100%;
+        font-family: var(--mapo);
+        li {
+            width: 100%;
+            border-bottom: 1px dashed var(--yellow100);
+            padding: 10px 10px;
+            margin-top: 10px;
+
+            a {
+                width: 100%;
+                position: relative;
+                display: inline-block;
+
+                svg {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    position: absolute;
+                    left: 0rem;
+                    top: 0.3rem;
+                }
+                
+                padding: 5px 25px;
+
+            }
+
+            
+        }
+        li:hover {
+            
+            background-color: var(--yellow);
+            color: var(--black);
+            border-radius: 20px;
+            svg {
+                color: #ff0000;
+            }
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.header_sns {
+    border-top: 1px solid var(--yellow);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 18px 0 9px;
+    background-color: var(--yellow);
+
+    li {
+        display: inline-block;
+        color: var(--black);
+
+        a {
+            display: inline-block;
+            padding: 5px 7px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

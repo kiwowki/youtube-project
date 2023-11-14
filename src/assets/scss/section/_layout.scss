@@ -1,0 +1,36 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #000000;
+}
+
+
+
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+    background-color: var(--black100);
+}
+#footer {
+    text-align: center;
+    background-color: var(--black);
+    border-top: 1px solid var(--yellow100);
+    padding: 10px 10px 10px 250px;
+
+    a {
+        color: var(--black200);
+        padding: 10px;
+        display: inline-block;
+
+        &:hover {
+            @include underline;
+            text-decoration-color: var(--yellow100);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.musician_inner {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .musician {
+        width: 150px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        .musician_img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .musician_info {
+            text-align: center;
+            padding-top: 5px;
+            
+        }
+    }
+}

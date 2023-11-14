@@ -1,0 +1,54 @@
+#today {}
+.today_inner {
+    display: flex;
+    background-color: var(--black);  
+    margin-bottom: 2rem;
+
+    .today_thumb {
+        width: 40%;
+        // background-image: url(https://i.ytimg.com/vi/45cYwDMibGo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrCcHIa6ADyWCNMMMRwGmaJ3hKEA);
+        // background-position: center center;
+        // background-repeat: no-repeat;
+        // background-size: contain;
+    }
+
+    .today_text {
+        width: 60%;
+        height: 310px;
+        padding: 2rem;
+        position: relative;
+
+        .today {
+            @include line(1);
+            background-color: var(--yellow);
+            color: var(--black);
+            padding: 1px 30px;
+            display: inline-block;
+            border-radius: 40px;
+        }
+        
+        .title {
+            line-height: 2;
+            font-size: 1.5rem;
+            @include line(1);
+        }
+        .desc {
+            color: var(--black400);
+            @include line(3);
+        }
+        .info {
+            @include line(1);
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            .author {
+                background-color: var(--black200);
+                padding: 3px 7px;
+                color: var(--white);
+            }
+            .date {
+                color: var(--black400);
+            }
+        }
+    }
+}

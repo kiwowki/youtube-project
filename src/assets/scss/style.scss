@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// setting
+@import "setting/font";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/common";
+
+//section
+@import "section/layout.scss";
+@import "section/header.scss";
+@import "section/search.scss";
+@import "section/today.scss";
+@import "section/musician.scss";

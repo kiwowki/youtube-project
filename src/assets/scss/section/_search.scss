@@ -1,0 +1,17 @@
+.search_inner {
+    width: 100%;
+    padding: 17px 40px;
+    border-bottom: 1px solid var(--yellow);
+
+    label {
+        display: none;
+    }
+    .search_input {
+        width: 100%;
+        background-color: var(--black);
+        border: 2px solid var(--yellow100);
+        padding: 15px 30px;
+        border-radius: 50px;
+        color: var(--white);
+    }
+}

@@ -1,0 +1,31 @@
+// 언더라인
+@mixin underline {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+
+// 한 줄 효과
+@mixin line-one {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 두 줄 효과
+@mixin line-two {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+// 두 줄 이상
+@mixin line($line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
