@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Musician = () => {
   return (
-    <section id='musician'>
+    <section id='musicianPage'>
       <h2>락밴드 모음</h2>
       <div className="musician_inner">
       {musicianText.map((musician, key) => (

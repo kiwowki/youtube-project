@@ -6,7 +6,10 @@
     height: 100vh;
     z-index: 1000;
     background-color: #000000;
+
+    
 }
+
 
 
 
@@ -33,4 +36,14 @@
             text-decoration-color: var(--yellow100);
         }
     }
+}
+
+@media (max-width:800px) {
+    #header {
+        left: -260px;
+    }
+    #main {
+        padding-left: 0px;
+    }
+    #footer {}
 }

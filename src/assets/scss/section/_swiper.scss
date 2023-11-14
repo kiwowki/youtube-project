@@ -1,0 +1,13 @@
+.swiper-button-prev,
+.swiper-button-next {
+    width: 45px;
+    height: 45px;
+    top: var(--swiper-navigation-top-offset, 42%);
+    background-color: var(--black);
+    border-radius: 50%;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    font-size: 20px;
+    color: var(--yellow);
+}

@@ -3,24 +3,72 @@
     flex-wrap: wrap;
     
     .musician {
-        width: 150px;
-        margin-right: 20px;
-        margin-bottom: 20px;
+        // width: 150px;
+        // margin-right: 20px;
+        // margin-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         
         .musician_img {
-            width: 130px;
-            height: 130px;
+            // width: 130px;
+            // height: 130px;
+            // 스와이퍼에서 사이즈 지원 중
             border-radius: 50%;
             overflow: hidden;
         }
         .musician_info {
             text-align: center;
             padding-top: 5px;
-            
+            @include line(1);
+        }
+    }
+}
+
+#musicianPage {
+    .musician_inner {
+        .musician {
+            width: 150px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+
+            .musician_img {
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .musician_inner {
+            justify-content: space-between;
+            .musician {
+                width: 24%;
+                margin-right: 0;
+                .musician_img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        .musician_inner {
+            .musician {
+                width: 31%;
+                .musician_img {
+                }
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        .musician_inner {
+            .musician {
+                width: 48%;
+                .musician_img {
+                }
+            }
         }
     }
 }
