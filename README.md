@@ -33,3 +33,55 @@
 - breakpoints: Swiper의 반응형 데모
 
 - swiper.scss를 만들어서 추가로 scss작업
+
+
+### YOUTUBE API 사용하기
+[YOUTUBE API](https://developers.google.com/youtube/v3/docs/)
+
+1. Reference에서 원하는 API(Search: list)를 선택해 Try this method에서 설정(part: snippet, maxResult: 48) 후 show code 합니다.
+
+2. YOUTUBE API의 cURL 중 https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=48&key=[YOUR_API_KEY]를 복사해서 ([YOUR_API_KEY]에는 []도 지우고 본인 api 키를 넣습니다.) postman의 My Workspace에 들어가서 GET 링크 넣는 곳에 삽입합니다.
+
+3. YOUTUBE API의 application/json에 나온 내용을 복사해 postman의 My Workspace에 들어가 body에 삽입합니다.
+
+4. .env 파일을 만들어 REACT_APP_YOUTUBE_API_KEY=[YOUR_API_KEY] 를 작성합니다.
+
+5. 이 이후는 검색해서 추가할 것.
+
+
+### Postman란?
+[포스트맨 다운로드 바로가기](https://www.postman.com/downloads/)
+
+API 개발 및 테스트를 위한 협업 도구로, 다양한 API 요청을 만들고 테스트할 수 있는 플랫폼입니다. Postman을 사용하면 간단하게 HTTP 요청을 생성하고, 서버로 요청을 보내고, 응답을 확인할 수 있습니다. 주로 개발자, 테스트 엔지니어, API 디자이너, 프로덕트 매니저 등이 API를 효과적으로 관리하고 테스트하기 위해 사용합니다.
+
+
+### Rapid YOUTUBE API 사용하기
+[Rapid-API Youtube v3](https://rapidapi.com/ytdlfree/api/youtube-v31/)
+
+1. 
+
+
+
+### 더보기 기능 추가하기
+전반적인 순서:
+더보기 버튼 누르기 -> nextPageToken이 있다면 handleLoadMore 발동 -> fetchVideos에 searchId, nextPageToken 전달 -> fetchVideos가 setVideos에 기존데이터에 데이터를 추가함 -> useEffect가 데이터를 보여줌
+
+
+
+
+
+
+
+
+
+#### useParams
+react-router-dom을 연동해서 url 값을 가져오는 훅. 
+
+#### useState
+const [ videos, setvideos]
+videos-> 변수
+setvideos-> 함수
+
+#### useEffect
+동적으로 나오게 하는..
+

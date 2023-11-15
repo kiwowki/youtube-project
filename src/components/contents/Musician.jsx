@@ -21,7 +21,7 @@ const Musician = () => {
           navigation={true}
           modules={[Autoplay, Navigation]}
           autoplay={{
-            delay: 300000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           breakpoints={{

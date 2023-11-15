@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import { menuText } from '../../data/header'
+import { keywordText, menuText } from '../../data/header'
 
 const Menu = () => {
     const location = useLocation();
@@ -16,15 +16,15 @@ const Menu = () => {
                     </li>
                 ))}
             </ul>
-            {/* <ul className='keyword'>
+            <ul className='keyword'>
                 {keywordText.map((keyword, key) => (
-                    <li key={key} className={location.pathname === keyword.src ? 'active' : ''}>
+                    <li key={key} className={decodeURIComponent(location.pathname) === decodeURIComponent(keyword.src) ? 'active' : ''}>
                         <Link to={keyword.src}>
                             {keyword.icon} {keyword.title}
                         </Link>
                     </li>
                 ))}
-            </ul> */}
+            </ul>
         </nav>
     )
 }

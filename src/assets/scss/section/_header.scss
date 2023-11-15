@@ -132,22 +132,29 @@
                 padding: 5px 25px;
 
             }
+            &.active {
+                // border-radius: 40px;
+                position: relative;
+                background-color: var(--yellow);
+                color: var(--black);
+                svg {
+                    color: #ff0000;
+                }
+            }
 
             
         }
         li:hover {
-            
+            // border-radius: 40px;
             background-color: var(--yellow);
             color: var(--black);
-            border-radius: 20px;
-            svg {
-                color: #ff0000;
-            }
         }
 
         li:last-child {
             border-bottom: none;
         }
+
+        
     }
 }
 
