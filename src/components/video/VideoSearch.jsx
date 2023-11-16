@@ -9,11 +9,11 @@ const formatDate = (dateString) => {
     return `${year}-${month}-${day}`;
 }
 
-const VideoSearch = ({ videos }) => {
+const VideoSearch = ({ videos, layout = '' }) => {
   return (
     <>
         {videos.map((video, key) => (
-            <div className='video' key={key}>
+            <div className={`video ${layout}`} key={key}>
                 <div className='video_thumb play_icon'>
                     <Link
                         to={`/video/${video.id.videoId}`}

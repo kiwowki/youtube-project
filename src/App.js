@@ -8,6 +8,7 @@ import Musician from "./pages/Musician"
 import Channel from "./pages/Channel"
 import Search from "./pages/Search"
 import Footer from "./components/section/Footer"
+import Video from "./pages/Video"
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/musician' element={<Musician />} />
           <Route path='/channel/:channelId' element={<Channel />} />
           <Route path='/search/:searchId' element={<Search />} />
+          <Route path='/video/:videoId' element={<Video />} />
         </Routes>
       </Main>
       <Footer />

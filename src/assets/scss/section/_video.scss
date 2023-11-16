@@ -2,15 +2,21 @@
     display: grid;
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
+    min-height: 100vh;
 
     .video {
+        padding: 10px;
         margin-bottom: 50px;
         border: 1px solid var(--black200);
         // display: flex;
         // flex-direction: column;
         // justify-content: space-between;
 
-
+        .channel & {
+            .info {
+                display: none;
+            }
+        }
         .video_thumb {
 
             a {
@@ -42,6 +48,8 @@
                 display: flex;
                 padding: 5px;
 
+                
+
                 .author {
                     width: 100%;
                     color: var(--black500);
@@ -67,10 +75,25 @@
         }
     }
 }
+@media (max-width: 1200px) {
+    .video_inner {
+        grid-template-columns: repeat(3, 32%);
+    }
+}
+@media (max-width: 1050px) {
+    .video_inner {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+@media (max-width: 600px) {
+    .video_inner {
+        grid-template-columns: repeat(1, 100%);
+    }
+}
 
 
 // 비디오 상세페이지
-#videoViewPage {
+#videoPage {
     padding: 0;
     border: 1px solid var(--yellow);
     border-top: none;
@@ -80,9 +103,9 @@
     padding: 0;
 
     .video_play {
-        // width: 100%;
-        // padding-bottom: 56.25%;
-        // position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        position: relative;
     }
 
     .video_info {
@@ -93,7 +116,7 @@
             padding-top: 20px;
             margin-bottom: 30px;
             font-size: 26px;
-            // border-bottom: 1px solid var(--black200);
+            border-bottom: 1px solid var(--black200);
         }
 
         .video_channel {
@@ -101,6 +124,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             margin-bottom: 30px;
+            
 
             .id {
                 font-weight: 800;
@@ -172,8 +196,14 @@
             padding: 20px 0;
             color: var(--black400);
             
-            span {
-                @include line(3);
+            .date {
+                display: inline-block;
+                width: 100%;
+                text-align: right;
+                
+            }
+            .desc {
+                @include line(5);
             }
         }
     }
