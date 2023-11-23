@@ -100,5 +100,5 @@ export const todayText = [
         date: "2010. 2. 9",
         videoId: "dbB-mICjkQM",
         channelId: "UCGGhM6XCSJFQ6DTRffnKRIw"
-    },
+    }
 ]
