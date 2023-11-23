@@ -6,6 +6,8 @@
 유명 락밴드의 음악이 듣고싶다면 여기서 원하는 밴드를 선택해 그들의 음악을 들어보세요!
 신나는 음악부터 음울한 음악까지 모두 경험해보실 수 있습니다.
 
+<img src="https://kiwowki.github.io/youtube-project/src/assets/img/cover.jpg">
+
 ## 셋팅
 
 ### 필요한 패키지 설치 한 번에 하기
@@ -93,3 +95,4 @@ setvideos-> 함수
   const searchPageClass = loading ? 'isLoading' : 'isLoaded';
   className에 isLoading, isLoaded 추가하는 기능임.
   scss opacity 조절해서 애니메이션 주기
+
