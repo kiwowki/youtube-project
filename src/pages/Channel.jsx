@@ -5,6 +5,21 @@ import { fetchFromAPI } from '../utils/api';
 import VideoSearch from '../components/video/VideoSearch';
 import Main from '../components/section/Main';
 
+const formatCount = (count) => {
+  const billion = 100000000;
+  const million = 10000; // 1만을 나타냄
+
+  if (count >= billion) {
+    const formatted = (count / billion).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    return formatted.endsWith('.00') ? `${formatted.slice(0, -3)} 억` : `${formatted} 억`;
+  } else if (count >= million) {
+    const formatted = (count / million).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    return formatted.endsWith('.00') ? `${formatted.slice(0, -3)} 만` : `${formatted} 만`;
+  } else {
+    return count % 1 === 0 ? count.toLocaleString() : count.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  }
+};
+
 const Channel = () => {
   const { channelId } = useParams();
   const [channelDetail, setChannelDetail] = useState();
@@ -61,9 +76,9 @@ const Channel = () => {
             <h3 className="title">{channelDetail.snippet.title}</h3>
             <p className="desc"><span>{channelDetail.snippet.description}</span></p>
             <div className='info'>
-              <span><p>구독자 수</p>: {channelDetail.statistics.subscriberCount} 명</span>
-              <span><p>동영상 개수</p>: {channelDetail.statistics.videoCount} 개</span>
-              <span><p>총 조회수</p>: {channelDetail.statistics.viewCount} 회</span>
+              <span><p>구독자 수</p>: {formatCount(Number(channelDetail.statistics.subscriberCount))} 명</span>
+              <span><p>동영상 개수</p>: {formatCount(Number(channelDetail.statistics.videoCount))} 개</span>
+              <span><p>총 조회수</p>: {formatCount(Number(channelDetail.statistics.viewCount))} 회</span>
             </div>
           </div>
           <div className='channel_video video_inner search'>

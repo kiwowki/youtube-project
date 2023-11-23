@@ -92,9 +92,9 @@ const Video = () => {
                 <Link to={`/channel/${videoDetail.snippet.channelId}`}>{videoDetail.snippet.channelTitle}</Link>
               </div>
               <div className='count'>
-              <span className='view'><GrFormView className='grIcon' /><span>조회수 </span>{formatCount(Number(videoDetail.statistics.viewCount))} 회</span>
-                  <span className='like'><LuThumbsUp className='luIcon' /><span>좋아요 </span>{formatCount(Number(videoDetail.statistics.likeCount))} 개</span>
-                  <span className='comment'><BiCommentDetail className='biIcon' /><span>댓글 </span>{formatCount(Number(videoDetail.statistics.commentCount))} 개</span>
+                <span className='view'><GrFormView className='grIcon' /><span>조회수 </span>{formatCount(Number(videoDetail.statistics.viewCount))} 회</span>
+                <span className='like'><LuThumbsUp className='luIcon' /><span>좋아요 </span>{formatCount(Number(videoDetail.statistics.likeCount))} 개</span>
+                <span className='comment'><BiCommentDetail className='biIcon' /><span>댓글 </span>{formatCount(Number(videoDetail.statistics.commentCount))} 개</span>
               </div>
             </div>
             <div className="video_desc">
