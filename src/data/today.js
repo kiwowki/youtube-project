@@ -57,7 +57,7 @@ export const todayText = [
         date: "2015. 9. 11",
         videoId: "tH-GPdkkNik",
         channelId: "UCDPM_n1atn2ijUwHd0NNRQw"
-    }, ,
+    },
     {
         img: "https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg",
         title: "Nirvana - Smells Like Teen Spirit (Official Music Video)",
@@ -70,7 +70,7 @@ export const todayText = [
         date: "2009. 6. 17",
         videoId: "hTWKbfoikeg",
         channelId: "UCFMZHIQMgBXTSxsr86Caazw"
-    }, ,
+    },
     {
         img: "https://i.ytimg.com/vi/ujNeHIo7oTE/hqdefault.jpg",
         title: "U2 - With Or Without You (Official Music Video)",
@@ -85,7 +85,7 @@ export const todayText = [
         date: "2019. 7. 16",
         videoId: "ujNeHIo7oTE",
         channelId: "UC4gPNusMDwx2Xm-YI35AkCA"
-    }, ,
+    },
     {
         img: "https://i.ytimg.com/vi/dbB-mICjkQM/hqdefault.jpg",
         title: "Muse - Plug In Baby (Official Video)",
