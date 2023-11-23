@@ -6,10 +6,10 @@
 
     .today_thumb {
         width: 40%;
-        // background-image: url(https://i.ytimg.com/vi/45cYwDMibGo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrCcHIa6ADyWCNMMMRwGmaJ3hKEA);
-        // background-position: center center;
-        // background-repeat: no-repeat;
-        // background-size: contain;
+        display: flex;
+        align-items: center;
+        img {
+        }
     }
 
     .today_text {
@@ -34,7 +34,7 @@
         }
         .desc {
             color: var(--black400);
-            @include line(3);
+            @include line(4);
         }
         .info {
             @include line(1);
@@ -48,6 +48,30 @@
             }
             .date {
                 color: var(--black400);
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .today_inner {
+        .today_thumb {
+            .today_text {}
+        }
+    }
+}
+@media (max-width: 600px){
+    .today_inner {
+        flex-direction: column;
+        .today_thumb {
+            width: 100%;
+        }
+        .today_text {
+            width: 100%;
+            .desc {
+                display: block;
+                @include line(6);
             }
         }
     }

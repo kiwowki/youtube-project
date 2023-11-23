@@ -64,6 +64,7 @@
     padding: 10px;
     font-family: var(--hahm);
 
+
     .menu {
         li {
             margin-bottom: 5px;
@@ -110,6 +111,10 @@
     .keyword {
         width: 100%;
         font-family: var(--mapo);
+        overflow-y: auto; /* 세로 스크롤바를 표시하도록 설정 */
+        max-height: calc(100vh - 322px);
+        padding-right: 10px;
+        
         li {
             width: 100%;
             border-bottom: 1px dashed var(--yellow100);
@@ -152,10 +157,25 @@
 
         li:last-child {
             border-bottom: none;
+            margin-bottom: 10px;
         }
 
         
+        
     }
+
+}
+.header_menu .keyword::-webkit-scrollbar {
+    width: 10px;
+}
+.header_menu .keyword::-webkit-scrollbar {
+    width: 10px;
+}
+.header_menu .keyword::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+}
+.header_menu .keyword::-webkit-scrollbar-track {
+  background-color: var(--yellow100);
 }
 
 .header_sns {
@@ -181,5 +201,14 @@
                 height: 20px;
             }
         }
+    }
+}
+
+@media (max-width: 800px) {
+    .header_logo {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: var(--black100);
     }
 }

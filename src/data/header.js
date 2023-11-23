@@ -79,6 +79,50 @@ export const keywordText = [
         title: "Radiohead",
         icon: <TbHandRock />,
         src: "/search/Radiohead"
+    },{
+        title: "Nine Inch Nails",
+        icon: <TbHandRock />,
+        src: "/search/Nine Inch Nails"
+    },{
+        title: "Guns N' Roses",
+        icon: <TbHandRock />,
+        src: "/search/Guns N' Roses"
+    },{
+        title: "Nirvana",
+        icon: <TbHandRock />,
+        src: "/search/Nirvana"
+    },{
+        title: "TheWho",
+        icon: <TbHandRock />,
+        src: "/search/TheWho"
+    },{
+        title: "The Beach Boys",
+        icon: <TbHandRock />,
+        src: "/search/The Beach Boys"
+    },{
+        title: "Deep Purple Official",
+        icon: <TbHandRock />,
+        src: "/search/Deep Purple Official"
+    },{
+        title: "Metallica",
+        icon: <TbHandRock />,
+        src: "/search/Metallica"
+    },{
+        title: "Green Day",
+        icon: <TbHandRock />,
+        src: "/search/Green Day"
+    },{
+        title: "Sum 41",
+        icon: <TbHandRock />,
+        src: "/search/Sum 41"
+    },{
+        title: "Whitesnake TV",
+        icon: <TbHandRock />,
+        src: "/search/Whitesnake TV"
+    },{
+        title: "Linkin Park",
+        icon: <TbHandRock />,
+        src: "/search/Linkin Park"
     }
 ]
 

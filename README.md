@@ -67,11 +67,15 @@ API 개발 및 테스트를 위한 협업 도구로, 다양한 API 요청을 만
 더보기 버튼 누르기 -> nextPageToken이 있다면 handleLoadMore 발동 -> fetchVideos에 searchId, nextPageToken 전달 -> fetchVideos가 setVideos에 기존데이터에 데이터를 추가함 -> useEffect가 데이터를 보여줌
 
 
+### Suspense 기능 사용하기
+header, footer 빼고 main대신 suspense 씀
+fallback하고 import대신 lazy 어쩌고 함..
 
 
-
-
-
+### react-helmet-async
+헬맷 바꿔줌
+Helmet - defer={true} => 로딩이 되기 전? 후? 나오게하기?
+%s - ?
 
 
 #### useParams
@@ -85,3 +89,7 @@ setvideos-> 함수
 #### useEffect
 동적으로 나오게 하는..
 
+#### loading 페이지 부드럽게 나오기
+  const searchPageClass = loading ? 'isLoading' : 'isLoaded';
+  className에 isLoading, isLoaded 추가하는 기능임.
+  scss opacity 조절해서 애니메이션 주기

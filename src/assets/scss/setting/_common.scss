@@ -8,7 +8,7 @@ section {
     padding: 40px;
 
     @media (max-width: 800px){
-        padding: 20px;
+        padding: 110px 20px 50px 20px;
     }
 
     h2 {
@@ -54,4 +54,23 @@ section {
             opacity: 1;
         }
     }
+}
+
+// 로딩 소스
+.isLoading {
+    opacity: 0;
+    transition: opacity 0.5s;
+    // position: relative;
+}
+// .isLoading::before {
+//     content: "로딩하고 있다.";
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+// }
+
+.isLoaded {
+    opacity: 1;
+    transition: opacity 0.5s;
 }

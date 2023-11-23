@@ -15,19 +15,19 @@ export const musicianText = [
         img: "https://yt3.googleusercontent.com/a9ORN4GJkhzjCmBOneVSEdtp1KvT5kWNX6dvCo128aJQ-pvCR3MXyU6BUQVkrLG6Yz5K66-Odr4=s176-c-k-c0x00ffffff-no-rj",
         author: "Pink Floyd",
         channelId: "UCc4K7bAqpdBP8jh1j9XZAww",
-        channelAddress: "hwww.youtube.com/@pinkfloyd",
+        channelAddress: "https://www.youtube.com/@pinkfloyd",
     },
     {
         img: "https://yt3.googleusercontent.com/X1hxG_g3g4zgQhkwPK1Q_InYbxGSjwAHdoZQWPG1Fp8cUDgMWi7j0MudKSuFYMLTvKYm9RjR44o=s176-c-k-c0x00ffffff-no-rj",
         author: "Queen Official",
         channelId: "UCiMhD4jzUqG-IgPzUmmytRQ",
-        channelAddress: "www.youtube.com/@Queen",
+        channelAddress: "https://www.youtube.com/@Queen",
     },
     {
         img: "https://yt3.googleusercontent.com/ytc/APkrFKZu24nNyPPeHqRCbgTx-AueOAdA5ywEGkb02d5yAA=s176-c-k-c0x00ffffff-no-rj",
         author: "AC/DC",
         channelId: "UCB0JSO6d5ysH2Mmqz5I9rIw",
-        channelAddress: "www.youtube.com/@acdc",
+        channelAddress: "https://www.youtube.com/@acdc",
     },
     {
         img: "https://yt3.googleusercontent.com/GXv3bxHkUVrbs4zwiDxI1MehnPT94J6hNRJWh5A7EI-z1AxSCMng4TD3byCRPXsVCvigbobFHTI=s176-c-k-c0x00ffffff-no-rj",

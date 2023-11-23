@@ -92,5 +92,21 @@
         }
     }
 
-    .channel_more {}
+    .video_more {
+        text-align: center;
+        button {
+            font-weight: 700;
+            line-height: 1.5;
+            padding: 5px 10px 5px 21px;
+            background-color: var(--black);
+            color: var(--white);
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+    }
 }
