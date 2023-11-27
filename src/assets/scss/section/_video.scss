@@ -137,6 +137,11 @@
                     border-radius: 30px;
                     background-color: var(--black);
                     display: inline-block;
+                    &:hover {
+                        background-color: var(--black500);
+                        color: var(--black);
+                        border: 1px solid var(--black);
+                    }
                 }
             }
 
@@ -343,6 +348,10 @@
             .title {
                 @include line-one;
                 font-size: 16px;
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-position: under;
+                }
             }
 
             .info {
@@ -357,7 +366,7 @@
                     text-underline-position: under;
 
                     &:hover {
-                        color: var(--black100);
+                        color: var(--white);
                     }
                 }
 
