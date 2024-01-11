@@ -1,16 +1,18 @@
 export const todayText = [
     {
-        img: "https://i.ytimg.com/vi/tI-5uv4wryI/hqdefault.jpg",
-        title: "Oasis - Champagne Supernova (Official Video)",
+        img: "https://i.ytimg.com/vi/6hzrDeceEKc/hqdefault.jpg",
+        title: "Oasis - Wonderwall (Official Video)",
         desc: (
             <>
-                "Champagne Supernova"는 1990년대의 브리티시 록 신에서 특히 돋보이는 작품 중 하나로, 그 당시의 음악적 트렌드를 잘 반영하고 있습니다. "Champagne Supernova"는 그들만의 독특한 감성과 진정성으로 많은 리스너들에게 여운을 남기고 있는 곡 중 하나입니다.
-                매력적인 멜로디와 감동적인 가사를 한번 느껴보세요!
+                "Wonderwall"은 영국의 록 밴드 오아시스(Oasis)가 1995년에 발표한 곡으로,
+                그들의 세 번째 스튜디오 앨범인 "(What's the Story) Morning Glory?"에 수록되어 있습니다. 이 곡은 오아시스의 대표곡 중 하나로 꼽히며 90년대 브리티시 록의 중요한 곡 중 하나로 평가받고 있습니다.
+                이 곡은 사랑의 복잡한 감정과 관련된 주제를 다루고 있으며, 그 감성적인 표현으로 많은 리스너들에게 감동을 전하고 있습니다.
+                간결하면서도 강렬한 기타 릴과 리드 보컬의 목소리를 한번 느껴보세요!
             </>
         ),
         author: "Oasis",
-        date: "2014. 1. 29",
-        videoId: "tI-5uv4wryI",
+        date: "2008. 02. 08",
+        videoId: "6hzrDeceEKc",
         channelId: "UCUDVBtnOQi4c7E8jebpjc9Q"
     },
     {
