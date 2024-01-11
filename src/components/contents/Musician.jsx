@@ -56,7 +56,7 @@ const Musician = () => {
         
             <SwiperSlide className="musician play_icon" key={key}>
               <div className="musician_img">
-                <Link to={`/${musician.channelId}`}>
+                <Link to={`/channel/${musician.channelId}`}>
                   <img src={musician.img} alt={musician.author} />
                 </Link>
 
