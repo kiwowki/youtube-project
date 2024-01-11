@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/proxy/*"
-  to = "경로/:splat"
-  status = 200
-  force = true
