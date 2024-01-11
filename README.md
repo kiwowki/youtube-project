@@ -48,7 +48,11 @@
 
 4. .env 파일을 만들어 REACT_APP_YOUTUBE_API_KEY=[YOUR_API_KEY] 를 작성합니다.
 
-5. 이 이후는 검색해서 추가할 것.
+5. API 요청을 보내기 위해 Axios 라이브러리 설치합니다.(미리 설치해두기)
+
+6. API 호출을 담당할 함수 작성합니다.(utils > api.js)
+
+7. 컴포넌트에서 함수 호출하고 실행 후 콘솔을 확인하여 API에서 받아온 데이터를 확인합니다.(Home, Channel, Video, Search 페이지 등)
 
 
 ### Postman란?
@@ -57,10 +61,10 @@
 API 개발 및 테스트를 위한 협업 도구로, 다양한 API 요청을 만들고 테스트할 수 있는 플랫폼입니다. Postman을 사용하면 간단하게 HTTP 요청을 생성하고, 서버로 요청을 보내고, 응답을 확인할 수 있습니다. 주로 개발자, 테스트 엔지니어, API 디자이너, 프로덕트 매니저 등이 API를 효과적으로 관리하고 테스트하기 위해 사용합니다.
 
 
-### Rapid YOUTUBE API 사용하기
+### Rapid YOUTUBE API
 [Rapid-API Youtube v3](https://rapidapi.com/ytdlfree/api/youtube-v31/)
 
-1. 
+Rapid YouTube API는 더 빠른 응답 속도, 사용 편의성, 추가 기능, 개발자 문서화 및 다양한 가격 옵션을 제공하며, 개발자들에게 더욱 효율적이고 편리한 YouTube API 경험을 제공합니다.
 
 
 
@@ -70,29 +74,46 @@ API 개발 및 테스트를 위한 협업 도구로, 다양한 API 요청을 만
 
 
 ### Suspense 기능 사용하기
-header, footer 빼고 main대신 suspense 씀
-fallback하고 import대신 lazy 어쩌고 함..
+Home, Today, Musician, Channel, Search, Video 컴포넌트들을 lazy 함수를 사용하여 비동기적으로 import합니다. 이렇게 하면 각 페이지 컴포넌트들이 필요한 시점에서 비동기적으로 로딩됩니다.
+Suspense 컴포넌트를 사용하여 로딩 중에 보여줄 컴포넌트(Main)를 지정합니다. 이는 페이지 컴포넌트들이 로딩되는 동안 메인 컴포넌트를 보여주게 됩니다.
 
 
 ### react-helmet-async
-헬맷 바꿔줌
-Helmet - defer={true} => 로딩이 되기 전? 후? 나오게하기?
-%s - ?
-
-
+Helmet : Helmet 컴포넌트는 <head> 요소의 내용을 동적으로 변경하는 역할을 합니다. Helmet 컴포넌트 안에서 titleTemplate, defaultTitle, defer 속성 등을 설정하여 페이지의 제목과 메타 데이터를 조작할 수 있습니다.  
+    
+defer: defer 속성은 스크립트를 비동기로 로드하도록 지시합니다. 이를 통해 페이지의 로딩 속도를 향상시킬 수 있습니다.   
+   
+titleTemplate: titleTemplate은 페이지의 제목을 동적으로 설정하기 위한 템플릿입니다. %s는 문자열 포맷팅에서 사용되는 플레이스홀더로, %s 자리에 실제 제목이 들어가게 됩니다. 예를 들어, props.title 값이 "My Music"이면 실제로 설정되는 제목은 "My Music | Musician Youtube"가 됩니다.
+   
+   
 #### useParams
 react-router-dom을 연동해서 url 값을 가져오는 훅. 
 
 #### useState
-const [ videos, setvideos]
+const [ videos, setvideos ]
 videos-> 변수
 setvideos-> 함수
 
 #### useEffect
-동적으로 나오게 하는..
+컴포넌트에서 부수 효과(side effect)를 수행하기 위해 사용됩니다. 부수 효과란 컴포넌트 외부의 데이터를 가져오거나 조작하는 작업을 말합니다. 예를 들어, API 요청을 보내거나 이벤트 리스너를 등록하는 등의 작업을 수행할 수 있습니다.
 
 #### loading 페이지 부드럽게 나오기
   const searchPageClass = loading ? 'isLoading' : 'isLoaded';
   className에 isLoading, isLoaded 추가하는 기능임.
   scss opacity 조절해서 애니메이션 주기
 
+
+## 트러블 슈팅
+
+<details>
+<summary>Whitespace 에러</summary>
+유닉스 시스템에서는 한 줄의 끝이 LF(Line Feed)로 이루어지는 반면,   
+윈도우에서는 줄 하나가 CR(Carriage Return)과 LF, 즉 CRLF로 이루어지는데   
+Git이 이 둘 중 어느 쪽으로 선택할지 혼란이 온 것이다.   
+   
+해결방법   
+`git config --global core.autocrlf true` // 시스템 전체에 적용 
+⠀  
+`git config core.autocrlf true` // 해당 프로젝트에만 적용
+
+</details>
