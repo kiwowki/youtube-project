@@ -98,9 +98,9 @@ setvideos-> 함수
 컴포넌트에서 부수 효과(side effect)를 수행하기 위해 사용됩니다. 부수 효과란 컴포넌트 외부의 데이터를 가져오거나 조작하는 작업을 말합니다. 예를 들어, API 요청을 보내거나 이벤트 리스너를 등록하는 등의 작업을 수행할 수 있습니다.
 
 #### loading 페이지 부드럽게 나오기
-  const searchPageClass = loading ? 'isLoading' : 'isLoaded';
-  className에 isLoading, isLoaded 추가하는 기능임.
-  scss opacity 조절해서 애니메이션 주기
+  const searchPageClass = loading ? 'isLoading' : 'isLoaded';   
+  className에 isLoading, isLoaded를 추가하는 코드입니다.   
+  scss에서 opacity를 조절해서 애니메이션을 줍니다.
 
 
 ### Netlify Page Not Found 에러
