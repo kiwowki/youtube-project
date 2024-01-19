@@ -10,7 +10,7 @@
 
 ### 셋팅
 
-### 필요한 패키지 설치 한 번에 하기
+#### 필요한 패키지 설치 한 번에 하기
 
 `npm install react-router-dom axios react-icon react-player sass react-helmet-async swiper`
 
