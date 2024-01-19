@@ -90,7 +90,7 @@ titleTemplate: titleTemplate은 페이지의 제목을 동적으로 설정하기
 react-router-dom을 연동해서 url 값을 가져오는 훅. 
 
 #### useState
-const [ videos, setvideos ]
+`const [ videos, setvideos ]`
 videos-> 변수
 setvideos-> 함수
 
@@ -98,7 +98,7 @@ setvideos-> 함수
 컴포넌트에서 부수 효과(side effect)를 수행하기 위해 사용됩니다. 부수 효과란 컴포넌트 외부의 데이터를 가져오거나 조작하는 작업을 말합니다. 예를 들어, API 요청을 보내거나 이벤트 리스너를 등록하는 등의 작업을 수행할 수 있습니다.
 
 #### loading 페이지 부드럽게 나오기
-  const searchPageClass = loading ? 'isLoading' : 'isLoaded';   
+  `const searchPageClass = loading ? 'isLoading' : 'isLoaded';`   
   className에 isLoading, isLoaded를 추가하는 코드입니다.   
   scss에서 opacity를 조절해서 애니메이션을 줍니다.
 
@@ -109,7 +109,7 @@ React 또는 Vue와 같은 SPA 프레임워크를 사용하고 있다면, 서버
 - React의 경우
 1. public/_redirects 파일을 생성
 2. `/*    /index.html   200` 작성
-3. npm run build를 하고 다시 배포해보기
+3. `npm run build` 를 하고 다시 배포해보기
 
 
 ## 트러블 슈팅
