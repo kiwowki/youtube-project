@@ -8,7 +8,7 @@
 
 <img src="https://kiwowki.github.io/youtube-project/src/assets/img/cover.jpg">
 
-## 셋팅
+### 셋팅
 
 ### 필요한 패키지 설치 한 번에 하기
 
