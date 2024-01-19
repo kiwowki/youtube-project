@@ -103,16 +103,24 @@ setvideos-> 함수
   scss에서 opacity를 조절해서 애니메이션을 줍니다.
 
 
-### Netlify Page Not Found 에러
-- SPA(싱글 페이지 애플리케이션) 라우팅 설정이 필요한 경우
-React 또는 Vue와 같은 SPA 프레임워크를 사용하고 있다면, 서버 사이드에서 URL을 직접 처리하는 설정이 필요할 수 있습니다. Netlify는 기본적으로 SPA를 지원하지만, 몇 가지 추가적인 설정이 필요한 경우가 있습니다.
-- React의 경우
-1. public/_redirects 파일을 생성
-2. `/*    /index.html   200` 작성
-3. `npm run build` 를 하고 다시 배포해보기
+### 
+
 
 
 ## 트러블 슈팅
+
+<details>
+<summary>Netlify Page Not Found 에러</summary>
+- SPA(싱글 페이지 애플리케이션) 라우팅 설정이 필요한 경우
+React 또는 Vue와 같은 SPA 프레임워크를 사용하고 있다면, 서버 사이드에서 URL을 직접 처리하는 설정이 필요할 수 있습니다. Netlify는 기본적으로 SPA를 지원하지만, 몇 가지 추가적인 설정이 필요한 경우가 있습니다.
+   
+해결방법   
+- React의 경우
+1. public/_redirects 파일을 생성
+2. `/*    /index.html   200` 작성
+3. `npm run build` 를 하고 다시 배포해보기  
+
+</details>
 
 <details>
 <summary>Whitespace 에러</summary>
