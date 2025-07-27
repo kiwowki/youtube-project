@@ -1,12 +1,15 @@
 # 나만의 음악(락) 유튜브 사이트 만들기
 
-유튜브 API를 이용해서 음악을 듣는 사이트를 만들었습니다.
+YOUTUBE API를 이용해서 유튜브를 대체하여 음악을 듣는 사이트를 만들었습니다.
 
 음악 장르 중 가장 좋아하는 락에서 유명한 락밴드들을 모아봤습니다.
-유명 락밴드의 음악이 듣고싶다면 여기서 원하는 밴드를 선택해 그들의 음악을 들어보세요!
-신나는 음악부터 감성적인 음악까지 모두 경험해보실 수 있습니다.
+유명 락밴드의 음악이 듣고 싶다면 여기서 원하는 밴드를 선택해 그들의 음악을 들어보세요!
+신나는 음악부터 감성적인 음악까지 모두 경험해 보실 수 있습니다.
+오늘의 락 추천과 락밴드의 채널 정보를 확인하고, 검색 기능을 활용해 보세요.
 
 <img src="https://kiwowki.github.io/youtube-project/src/assets/img/cover.jpg">
+
+[rock-music-youtube.netlify.app](https://rock-music-youtube.netlify.app/)
 
 ### 셋팅
 
@@ -36,36 +39,48 @@
    
 - swiper.scss를 만들어서 추가로 scss작업
 
+### YOUTUBE API 첫 시작 및 활용
+- API KEY 받기
+  [YouTube Data API v3](https://console.cloud.google.com/apis/api/youtube.googleapis.com/)
 
-### YOUTUBE API 사용하기
-[YOUTUBE API](https://developers.google.com/youtube/v3/docs/)
+  1. 사용자 인증 정보 페이지에서 키 발급
 
-1. Reference에서 원하는 API(Search: list)를 선택해 Try this method에서 설정(part: snippet, maxResult: 48) 후 show code 합니다.
+  2. .env 파일(프로젝트 최상단)에 REACT_APP_GOOGLE_YOUTUBE_KEY=[YOUR_API_KEY] 하여 넣기
 
-2. YOUTUBE API의 cURL 중 https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=48&key=[YOUR_API_KEY]를 복사해서 ([YOUR_API_KEY]에는 []도 지우고 본인 api 키를 넣습니다.) postman의 My Workspace에 들어가서 GET 링크 넣는 곳에 삽입합니다.
+- API 활성화
 
-3. YOUTUBE API의 application/json에 나온 내용을 복사해 postman의 My Workspace에 들어가 body에 삽입합니다.
+  1. YouTube Data API v3 활성화
 
-4. .env 파일을 만들어 REACT_APP_YOUTUBE_API_KEY=[YOUR_API_KEY] 를 작성합니다.
+  2. Google Cloud 콘솔 API 라이브러리 페이지로 이동
 
-5. API 요청을 보내기 위해 Axios 라이브러리 설치합니다.(미리 설치해두기)
+  3. 해당 프로젝트(554232169123) 선택 확인
 
-6. API 호출을 담당할 함수 작성합니다.(utils > api.js)
+  4. 상단의 사용 설정(Enable) 버튼 클릭
 
-7. 컴포넌트에서 함수 호출하고 실행 후 콘솔을 확인하여 API에서 받아온 데이터를 확인합니다.(Home, Channel, Video, Search 페이지 등)
+  5. 활성화 완료 후 수 분 기다렸다가 재시도
+
+- API 활용하기
+  [YOUTUBE API](https://developers.google.com/youtube/v3/docs/)
+
+  1. Reference에서 원하는 API(Search: list)를 선택해 Try this method에서 설정(part: snippet, maxResult: 48) 후 show code 하기
+
+  2. YOUTUBE API의 cURL 중 https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=48&key=[YOUR_API_KEY]를 복사. postman의 My Workspace에 들어가서 GET 링크 넣는 곳에 삽입 해보기
+
+  3. YOUTUBE API의 application/json에 나온 내용을 복사해 postman의 My Workspace에 들어가 body에 삽입
+
+  4. 정상 작동을 확인했다면 API 호출을 담당할 함수 작성(utils > api.js)
+
+  5. 컴포넌트에서 함수 호출하고 실행 후 콘솔을 확인하여 API에서 받아온 데이터를 확인(Home, Channel, Video, Search 페이지 등)
+
+- 주의 할 점
+  api호출에 일일 쿼터 사용량이 제한되어있으므로 과도한 호출은 자제 하도록 한다.
+  => api 호출 파라미터 maxResults: 48 -> 20 으로 변경
 
 
 ### Postman이란?
 [포스트맨 다운로드 바로가기](https://www.postman.com/downloads/)
 
 API 개발 및 테스트를 위한 협업 도구로, 다양한 API 요청을 만들고 테스트할 수 있는 플랫폼입니다. Postman을 사용하면 간단하게 HTTP 요청을 생성하고, 서버로 요청을 보내고, 응답을 확인할 수 있습니다. 주로 개발자, 테스트 엔지니어, API 디자이너, 프로덕트 매니저 등이 API를 효과적으로 관리하고 테스트하기 위해 사용합니다.
-
-
-### Rapid YOUTUBE API
-[Rapid-API Youtube v3](https://rapidapi.com/ytdlfree/api/youtube-v31/)
-
-Rapid YouTube API는 더 빠른 응답 속도, 사용 편의성, 추가 기능, 개발자 문서화 및 다양한 가격 옵션을 제공하며, 개발자들에게 더욱 효율적이고 편리한 YouTube API 경험을 제공합니다.
-
 
 
 ### 더보기 기능 추가하기

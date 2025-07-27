@@ -1,7 +1,7 @@
 .header_logo {
     border-bottom: 1px solid var(--yellow);
     font-family: var(--oswald);
-    
+
 
     a {
         display: flex;
@@ -16,7 +16,7 @@
             border: 2px solid var(--yellow);
             position: relative;
             animation: logo 25s 1s ease-in-out infinite;
-            
+
 
             @keyframes logo {
                 0% {
@@ -51,6 +51,7 @@
             font-size: 23px;
             line-height: 1.2;
             font-weight: 900;
+
             em {
                 font-style: normal;
                 border: none;
@@ -111,10 +112,11 @@
     .keyword {
         width: 100%;
         font-family: var(--mapo);
-        overflow-y: auto; /* 세로 스크롤바를 표시하도록 설정 */
+        overflow-y: auto;
+        /* 세로 스크롤바를 표시하도록 설정 */
         max-height: calc(100vh - 322px);
         padding-right: 10px;
-        
+
         li {
             width: 100%;
             border-bottom: 1px dashed var(--yellow100);
@@ -133,22 +135,25 @@
                     left: 0rem;
                     top: 0.3rem;
                 }
-                
+
                 padding: 5px 25px;
 
             }
+
             &.active {
                 // border-radius: 40px;
                 position: relative;
                 background-color: var(--yellow);
                 color: var(--black);
+
                 svg {
                     color: #ff0000;
                 }
             }
 
-            
+
         }
+
         li:hover {
             // border-radius: 40px;
             background-color: var(--yellow);
@@ -160,22 +165,26 @@
             margin-bottom: 10px;
         }
 
-        
-        
+
+
     }
 
 }
+
 .header_menu .keyword::-webkit-scrollbar {
     width: 10px;
 }
+
 .header_menu .keyword::-webkit-scrollbar {
     width: 10px;
 }
+
 .header_menu .keyword::-webkit-scrollbar-thumb {
-  background-color: var(--yellow);
+    background-color: var(--yellow);
 }
+
 .header_menu .keyword::-webkit-scrollbar-track {
-  background-color: var(--yellow100);
+    background-color: var(--yellow100);
 }
 
 .header_sns {
@@ -210,5 +219,27 @@
         left: 0;
         top: 0;
         background-color: var(--black100);
+
+        a {
+            padding: 10px;
+            margin: 3.5px;
+
+            em {
+                width: 35px;
+                height: 35px;
+
+                svg {
+                    left: 5px;
+                    top: 5px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+
     }
 }

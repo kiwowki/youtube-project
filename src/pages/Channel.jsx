@@ -26,29 +26,43 @@ const Channel = () => {
   const [channelVideo, setChannelVideo] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nextPageToken, setNextPageToken] = useState(null);
-  
+
 
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
-        // console.log(data)
-        setChannelDetail(data.items[0])
+        // 1) 채널 정보 가져올 때 snippet + brandingSettings 요청
+        const channelData = await fetchFromAPI(
+          "channels",
+          {
+            part: "snippet,brandingSettings",
+            id: channelId
+          }
+        );
+        setChannelDetail(channelData.items[0]);
 
-        const videoData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet&order=date`)
-        console.log(videoData.items)
+        // 2) 영상 목록 가져올 때는 search 엔드포인트와 필요한 파라미터만
+        const videoData = await fetchFromAPI(
+          "search",
+          {
+            channelId,
+            part: "snippet",
+            order: "date"
+          }
+        );
         setChannelVideo(videoData.items);
-      } catch(error){
+      } catch (error) {
         console.log("Error -> ", error);
       } finally {
         setLoading(false);
       }
     };
+
     fetchResults();
-  }, [channelId])
+  }, [channelId]);
 
   const loadMoreVideos = async () => {
-    if(nextPageToken){
+    if (nextPageToken) {
       const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date&pageToken=${nextPageToken}`);
       setChannelVideo(prevVideos => [...prevVideos, ...videosData.items]);
       setNextPageToken(videosData?.nextPageToken);
@@ -59,39 +73,39 @@ const Channel = () => {
 
   return (
     <Main
-      title = "락밴드 유튜브 공식 채널"
-      description = "락밴드 유튜브 공식 채널 페이지 입니다. 밴드의 음악 영상을 모두 확인할 수 있습니다."
+      title="락밴드 유튜브 공식 채널"
+      description="락밴드 유튜브 공식 채널 페이지 입니다. 밴드의 음악 영상을 모두 확인할 수 있습니다."
     >
 
-    <section id="channelPage" className={channelPageClass}>
-      {channelDetail && (
-        <div className="channel_inner">
-          <div className="channel_header" style={{backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})`}}>
-            <div className="circle">
-              <img src={channelDetail.snippet.thumbnails.default.url} alt="Channel Banner" />
+      <section id="channelPage" className={channelPageClass}>
+        {channelDetail && (
+          <div className="channel_inner">
+            <div className="channel_header" style={{ backgroundImage: `url(${channelDetail.brandingSettings.image.bannerExternalUrl})` }}>
+              <div className="circle">
+                <img src={channelDetail.snippet.thumbnails.default.url} alt="Channel Banner" />
+              </div>
             </div>
-          </div>
-          
-          <div className="channel_info">
-            <h3 className="title">{channelDetail.snippet.title}</h3>
-            <p className="desc"><span>{channelDetail.snippet.description}</span></p>
-            <div className='info'>
-              <span><p>구독자 수</p>: {formatCount(Number(channelDetail.statistics.subscriberCount))} 명</span>
-              <span><p>동영상 개수</p>: {formatCount(Number(channelDetail.statistics.videoCount))} 개</span>
-              <span><p>총 조회수</p>: {formatCount(Number(channelDetail.statistics.viewCount))} 회</span>
+
+            <div className="channel_info">
+              <h3 className="title">{channelDetail.snippet.title}</h3>
+              <p className="desc"><span>{channelDetail.snippet.description}</span></p>
+              <div className='info'>
+                <span><p>구독자 수</p>: {formatCount(Number(channelDetail.statistics.subscriberCount))} 명</span>
+                <span><p>동영상 개수</p>: {formatCount(Number(channelDetail.statistics.videoCount))} 개</span>
+                <span><p>총 조회수</p>: {formatCount(Number(channelDetail.statistics.viewCount))} 회</span>
+              </div>
             </div>
-          </div>
-          <div className='channel_video video_inner search'>
+            <div className='channel_video video_inner search'>
               <h2 className='blind'>동영상 목록</h2>
-              <VideoSearch videos={channelVideo} layout="channel"/>
+              <VideoSearch videos={channelVideo} layout="channel" />
+            </div>
+            <div className="channel_more">
+              {nextPageToken && <button onClick={loadMoreVideos}>더 보기 ▽</button>}
+            </div>
           </div>
-          <div className="channel_more">
-            {nextPageToken && <button onClick={loadMoreVideos}>더 보기 ▽</button>}
-          </div>
-        </div>
-      )}
-      
-    </section>
+        )}
+
+      </section>
     </Main>
   )
 }

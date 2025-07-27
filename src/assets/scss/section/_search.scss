@@ -2,14 +2,16 @@
     display: flex;
     border-bottom: 1px solid var(--yellow);
 }
+
 .search_inner {
     width: 100%;
     padding: 17px 40px;
-    
+
 
     label {
         display: none;
     }
+
     .search_input {
         width: 100%;
         background-color: var(--black);
@@ -21,19 +23,20 @@
 }
 
 #searchPage {
-    .video_inner {}
     .video_more {
         text-align: center;
+
         button {
             font-weight: 700;
             line-height: 1.5;
-            padding: 5px 10px 5px 21px;
+            padding: 5px 10px;
             background-color: var(--black);
             color: var(--white);
             cursor: pointer;
             transition: all 0.3s;
             border-radius: 5px;
         }
+
         button:hover {
             background-color: var(--yellow);
             color: var(--black);
@@ -43,7 +46,15 @@
 
 @media (max-width: 800px) {
     .search_inner {
-        padding-left: 240px;
+        // padding-left: 175px;
+        // padding: 14px 10px;
+        padding: 14px 10px  14px 175px;
+
+        .search_input {
+            font-size: 12px;
+            padding: 10px 15px;
+            border-radius: 25px;
+        }
     }
 
     #search {
@@ -63,7 +74,7 @@
 //     .mobile_menu {
 //         padding: 10px;
 //         margin: 7px;
-        
+
 //         div {
 //             width: 52px;
 //             height: 52px;
