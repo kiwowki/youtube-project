@@ -55,7 +55,7 @@ const Home = () => {
         })
         .catch(console.error);
     });
-  }, []);
+  }, [channels]);
 
 
   return (
