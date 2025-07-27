@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo  } from 'react'
 import { fetchFromAPI } from '../utils/api';
 
 import Main from '../components/section/Main'
@@ -10,40 +10,26 @@ import VideoSlider from '../components/video/VideoSlider'
 
 
 const Home = () => {
-  // const [channelVideoV1, setChannelVideoV1] = useState([]);
-  // const [channelVideoV2, setChannelVideoV2] = useState([]);
-  // const [channelVideoV3, setChannelVideoV3] = useState([]);
-  // const [channelVideoV4, setChannelVideoV4] = useState([]);
-
-  const channels = [
+  const channels = useMemo(() => [
     { id: "UCUDVBtnOQi4c7E8jebpjc9Q", title: "오아시스", name: "v1" },
     { id: "UCDPM_n1atn2ijUwHd0NNRQw", title: "콜드플레이", name: "v2" },
     { id: "UCGGhM6XCSJFQ6DTRffnKRIw", title: "뮤즈", name: "v3" },
     { id: "UCiMhD4jzUqG-IgPzUmmytRQ", title: "퀸", name: "v4" },
-  ];
+  ], []);
 
   const [videosList, setVideosList] = useState(() => channels.map(() => []));
 
   useEffect(() => {
-    // const v1 = "UCUDVBtnOQi4c7E8jebpjc9Q";
-    // const v2 = "UCDPM_n1atn2ijUwHd0NNRQw";
-    // const v3 = "UCGGhM6XCSJFQ6DTRffnKRIw";
-    // const v4 = "UCiMhD4jzUqG-IgPzUmmytRQ";
+    const channels = [
+      { id: "UCUDVBtnOQi4c7E8jebpjc9Q", title: "오아시스", name: "v1" },
+      { id: "UCDPM_n1atn2ijUwHd0NNRQw", title: "콜드플레이", name: "v2" },
+      { id: "UCGGhM6XCSJFQ6DTRffnKRIw", title: "뮤즈", name: "v3" },
+      { id: "UCiMhD4jzUqG-IgPzUmmytRQ", title: "퀸", name: "v4" },
+    ];
 
-    // const fetchResults = async (channelId, setDataFunction) => {
-    //   try {
-    //     const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet&order=date`);
-    //     setDataFunction(videosData.items);
-    //     console.log(videosData.items);
-    //   } catch (error) {
-    //     console.log("Error fetching data -> ", error);
-    //   }
-    // };
+    const initialList = channels.map(() => []);
+    setVideosList(initialList);
 
-    // fetchResults(v1, setChannelVideoV1);
-    // fetchResults(v2, setChannelVideoV2);
-    // fetchResults(v3, setChannelVideoV3);
-    // fetchResults(v4, setChannelVideoV4);
     channels.forEach(({ id }, idx) => {
       fetchFromAPI("search", { channelId: id, part: "snippet", order: "date" })
         .then(data => {
